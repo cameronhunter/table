@@ -1,14 +1,20 @@
-import table from "../index";
+import table from '../index';
 
-const data = table`
+type Data = {
+  cell: number;
+  presentation: 'slideshow' | 'static';
+  preloading: boolean;
+};
+
+const data = table<Data>`
   cell | presentation   | preloading
-  ${2} | ${"slideshow"} | ${true}
-  ${3} | ${"static"}    | ${true}
-  ${4} | ${"slideshow"} | ${false}
-  ${5} | ${"static"}    | ${false}
+  ${2} | ${'slideshow'} | ${true}
+  ${3} | ${'static'}    | ${true}
+  ${4} | ${'slideshow'} | ${false}
+  ${5} | ${'static'}    | ${false}
 `;
 
-test("data", () => {
+test('data', () => {
   expect(data).toMatchInlineSnapshot(`
     Array [
       Object {

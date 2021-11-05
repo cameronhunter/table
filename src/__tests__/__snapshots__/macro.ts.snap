@@ -2,9 +2,15 @@
 
 exports[`unknown plugin 1. unknown plugin: 1. unknown plugin 1`] = `
 
-import table from '../macro'
+import table from '../macro';
 
-const data = table\`
+type Data = {
+  cell: number;
+  presentation: 'slideshow' | 'static';
+  preloading: boolean;
+};
+
+const data = table<Data>\`
   cell | presentation   | preloading
   \${2} | \${'slideshow'} | \${true}
   \${3} | \${'static'}    | \${true}
@@ -13,6 +19,8 @@ const data = table\`
 \`;
 
       ↓ ↓ ↓ ↓ ↓ ↓
+
+"use strict";
 
 const data = [
   {
