@@ -3,7 +3,7 @@ export function getColumnNames(row: string | undefined): string[] | undefined {
     ? undefined
     : row
         .trim()
-        .split('|')
+        .split("|")
         .map((value) => value.trim());
 }
 

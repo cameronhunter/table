@@ -1,5 +1,5 @@
-import plugin from 'babel-plugin-macros';
-import pluginTester from 'babel-plugin-tester';
+import plugin from "babel-plugin-macros";
+import pluginTester from "babel-plugin-tester";
 
 pluginTester({
   plugin,
@@ -16,6 +16,6 @@ pluginTester({
         \${4} | \${'slideshow'} | \${false}
         \${5} | \${'static'}    | \${false}
       \`;
-    `
-  ]
+    `,
+  ],
 });

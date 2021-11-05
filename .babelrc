@@ -10,7 +10,5 @@
     ],
     "@babel/preset-typescript"
   ],
-  "plugins": [
-    "macros"
-  ]
+  "plugins": ["macros"]
 }
