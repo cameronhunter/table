@@ -1,4 +1,4 @@
-# Table
+# Table ![CI](https://github.com/cameronhunter/table/actions/workflows/ci.yml/badge.svg)
 
 Create an array of objects from a table of data defined in a template string.
 

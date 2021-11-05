@@ -4,6 +4,7 @@
   "description": "A tagged template for defining a table of data.",
   "main": "./lib/index.js",
   "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
+  "homepage": "https://github.com/cameronhunter/table",
   "license": "MIT",
   "files": [
     "./lib"
@@ -38,6 +39,10 @@
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cameronhunter/table.git"
   },
   "publishConfig": {
     "access": "public"
