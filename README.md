@@ -1,4 +1,4 @@
-# Table ![CI](https://github.com/cameronhunter/table/actions/workflows/ci.yml/badge.svg)
+# Table ![CI](https://github.com/cameronhunter/table/actions/workflows/ci.yml/badge.svg) [![npm version](https://img.shields.io/npm/v/@cameronhunter/table)](https://npmjs.com/package/@cameronhunter/table)
 
 Create an array of objects from a table of data defined in a template string.
 
