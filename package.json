@@ -1,6 +1,6 @@
 {
   "name": "@cameronhunter/table",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A tagged template for defining a table of data.",
   "main": "./lib/index.js",
   "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
