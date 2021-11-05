@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "verify": "yarn typecheck && yarn test",
-    "prepublishOnly": "yarn verify"
+    "prepublishOnly": "yarn build && yarn test"
   },
   "dependencies": {
     "babel-plugin-macros": "^3.1.0"
