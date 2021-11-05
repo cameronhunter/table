@@ -1,0 +1,35 @@
+{
+  "name": "@cameronhunter/table",
+  "version": "0.0.0",
+  "description": "A tagged template for defining a table of data.",
+  "main": "./lib/index.js",
+  "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-plugin-macros": "^3.1.0"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./macro": "./lib/macro.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/types": "^7.16.0",
+    "@types/babel-plugin-macros": "^2.8.5",
+    "@types/jest": "^27.0.2",
+    "@types/jsonpath": "^0.2.0",
+    "babel-jest": "^27.3.1",
+    "babel-plugin-tester": "^10.1.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
