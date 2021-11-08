@@ -2,6 +2,9 @@
   "include": [
     "./src/*.ts"
   ],
+  "exclude": [
+    "./*.js"
+  ],
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
@@ -11,7 +14,7 @@
     ],
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./lib",
+    "outDir": ".",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,

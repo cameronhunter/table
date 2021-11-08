@@ -2,27 +2,25 @@
   "name": "@cameronhunter/table",
   "version": "1.1.1",
   "description": "A tagged template for defining a table of data.",
-  "main": "./lib/index.js",
   "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
   "homepage": "https://github.com/cameronhunter/table",
   "license": "MIT",
-  "files": [
-    "./lib"
-  ],
   "scripts": {
+    "clean": "rm -rf ./*.{js,d.ts,map,log}",
+    "prebuild": "yarn clean",
     "build": "tsc",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit",
+    "pretest": "yarn build",
     "test": "jest",
-    "verify": "yarn typecheck && yarn test",
-    "prepublishOnly": "yarn build && yarn test"
+    "verify": "yarn test",
+    "prepublishOnly": "yarn test"
   },
   "dependencies": {
     "babel-plugin-macros": "^3.1.0"
   },
   "exports": {
-    ".": "./lib/index.js",
-    "./macro": "./lib/macro.js"
+    ".": "./index.js",
+    "./macro": "./macro.js"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -32,6 +30,7 @@
     "@types/babel-plugin-macros": "^2.8.5",
     "@types/jest": "^27.0.2",
     "@types/jsonpath": "^0.2.0",
+    "@types/node": "^12.20.36",
     "babel-jest": "^27.3.1",
     "babel-plugin-tester": "^10.1.0",
     "jest": "^27.3.1",
@@ -61,9 +60,23 @@
     ]
   },
   "jest": {
+    "testEnvironment": "node",
     "transform": {
       "\\.[jt]sx?$": "babel-jest"
     },
-    "testEnvironment": "node"
+    "projects": [
+      {
+        "displayName": "unit",
+        "testMatch": [
+          "<rootDir>/**/__tests__/**/*.ts"
+        ]
+      },
+      {
+        "displayName": "functional",
+        "testMatch": [
+          "<rootDir>/**/__functional__/**/*.ts"
+        ]
+      }
+    ]
   }
 }
